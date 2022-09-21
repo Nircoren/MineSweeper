@@ -1,0 +1,141 @@
+.board {
+    padding-right: 300px;
+    padding-left: 300px;
+    margin-left: 40px;
+    margin-top: 50px;
+
+    margin: 0px;
+    border: 2px solid;
+    border-color: #eeeeee #999999 #999999 #eeeeee;
+    background-color: #cccccc;
+    padding: 0px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    background-color: grey;
+}
+img{
+    width: 30px;
+    height: auto;
+}
+.marked {
+    background-image: url('red-flag.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+    
+}
+
+.safeCell {
+    background-color: yellow !important;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    border: 2px solid;
+    border-color: #eeeeee #999999 #999999 #eeeeee;
+    background-color: #cccccc;
+}
+
+.shownCell {
+    margin: 0px;
+    border: 2px solid;
+    border-color: #eeeeee;
+    background-color: #403636;
+
+}
+
+.megaHint {}
+
+.rightMenuDiv {}
+
+.sevenBoomDiv {}
+
+.upMenu {
+    display: flex;
+    justify-content: center;
+
+}
+
+.undoDiv {
+    display: flex;
+    align-items: center;
+}
+
+.smiley {
+    margin: 0px 20px;
+}
+
+.smileyDiv {
+    display: flex;
+    margin: 0px 20px;
+    align-items: center;
+}
+
+.tableMenusDiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 
+.leftMenuDiv{
+    display: inline-block;
+}
+
+.rightMenuDiv{
+    display: inline-block;
+} */
+
+.levelDiv {
+    text-align: center;
+}
+
+
+button {
+    padding: 10px 10px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+button:hover {
+    color: #e8e8e8;
+}
+
+button:hover::before {
+    width: 100%;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="initGame()">
+    <div class="mainDiv" style="text-align:center">
+
+        <div class="upMenu">
+            <p>timer: <span class="time">0</span></p>
+            <div class="smileyDiv">
+                <p class="smiley" onclick="initGame()">(:</p>
+            </div>
+            <div class="undoDiv">
+                <button class="undoBtn" onclick="undo()">undo</button>
+            </div>
+        </div>
+
+        <div class="levelDiv">
+            <button class="easy" onclick="setLevel(this)" data-level="1" data-size="4" data-mines="2"
+                data-lives="1">easy</button>
+            <button class="medium" onclick="setLevel(this)" data-level="2" data-size="8" data-mines="14"
+                data-lives="2">medium</button>
+            <button class="hard" onclick="setLevel(this)" data-level="3" data-size="12" data-mines="32"
+                data-lives="3">hard</button>
+        </div>
+
+        <div class="tableMenusDiv">
+            <div class="leftMenuDiv">
+                <p>lives: <span class="lives"></span></p>
+                <p>hints:
+                    <span onclick="onHintsClick(this)" class="hints" data-level='' data-hint-num="hint1">L</span>
+                    <span onclick="onHintsClick(this)" class="hints" data-hint-num="hint2">L</span>
+                    <span onclick="onHintsClick(this)" class="hints" data-hint-num="hint3">L</span>
+                </p>
+
+            </div>
+            <table class="board">
+            </table>
+            <div class="rightMenuDiv">
+                <div>
+                    <button class="megaHint" onclick="megaHint()">Mega Hint</button>
+                </div>
+                <div class="safeClickDiv">
+                    <button onclick="onSafeClick()">safe click</button>
+                    <p><span class="safeClicksLeft"></span> clicks availible</p>
+                </div>
+                <div class="sevenBoomDiv">
+                    <button class="sevenBoom" onclick="sevenBoom()">7BOOM!</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div>
+            <button class="manualMinesBtn" onclick="manualMines()">manual placement</button>
+        </div>
+
+
+
+
+
+    </div>
+    <script src="js/utils.js"></script>
+    <script src="js/mines.js"></script>
+    <script src="js/feature-functions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

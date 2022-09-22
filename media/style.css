@@ -1,10 +1,11 @@
 @font-face {
     font-family: myFont;
-    src: url(media/font.otf);
+    src: url(font.otf);
 }
 
-@import url('media/https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-@import url('media/https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 body {
     background-color: rgba(243, 218, 79, 0.191);
@@ -16,7 +17,7 @@ body {
 }
 
 img {
-    width: 15px;
+    width: 29px;
     height: auto;
 }
 
@@ -25,14 +26,14 @@ img {
 }
 
 .cell {
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
     border: 4.5px solid;
     border-color: #eeeeee #999999 #999999 #eeeeee;
     background-color: #cccccc;
     font-family: arial, sans-serif;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 25px;
     cursor: pointer;
 }
 
@@ -50,31 +51,21 @@ img {
     display: grid;
     grid-template-columns: 170px 200px;
     gap: 40px;
-    background-color: #e8e8e8;
-    border-radius: 30px;
-    box-shadow: 12px 12px rgba(0, 0, 0, 0.517);
-    padding: 10px;
-    grid-gap: 30px;
     position: fixed;
-    left: 0%;
-    top: 25%;
+    left: 8%;
+    top: 21%;
     /* display: inline-block; */
     font-size: 25px;
     font-weight: 1000;
     z-index: 1;
-    height: 150px;
 
 }
 
 .rightMenuDiv {
-   
-    padding: 40px;
-    padding-bottom: 0px;
-    max-height: 400px;
-    padding-left: 15px;
+    width: 200px;
     display: inline-block;
     position: fixed;
-    right: 7%;
+    right: 20%;
     top: 23%;
     z-index: 1;
 }
@@ -138,14 +129,14 @@ button:hover::before {
 
 .livesP,
 .hintsP {
-    width: 200px;
     text-align: left;
     font-size: 23px;
-    border-radius: 30px;
-
 }
 
+.livesP {
+    margin-bottom: 0px;
 
+}
 
 .lives {
     color: red;
@@ -154,10 +145,8 @@ button:hover::before {
     position: fixed;
 }
 
-.hints {
+.hints{
     font-size: 25px;
-    cursor: pointer;
-
 
 }
 
@@ -269,19 +258,19 @@ button:hover::before {
 
 }
 
-.brownNum {
+.brownNum{
     color: brown;
-}
+} 
 
-.paleBlueNum {
+.paleBlueNum{
     color: rgb(0, 107, 128);
-}
+} 
 
-.greyNum {
+.greyNum{
     color: grey;
-}
+} 
 
-.blackNum {
+.blackNum{
     color: black;
 }
 
@@ -295,33 +284,7 @@ button:hover::before {
 
 }
 
-.bestScoreTxt {
-    margin-top: 0px;
-    font-size: 23px;
-    text-align: left;
-    position: fixed;
-
-}
-.bestScoreDiv{
-    position: fixed;
-    margin-top: 100px
-}
-
 .bestScores {
-    margin-top: 0px;
-    margin-left: 200px;
+    margin-top: 6px;
     text-align: left;
-    margin-bottom: 10px;
-    text-align: start;
-}
-
-.aboveTableDiv{
-    width: 300px;
-    margin: auto;
-    position: relative;
-    padding: 20px;
-    padding-top: 10px;
-    background-color: #e8e8e8;
-    border-radius: 30px;
-    box-shadow: 12px 12px rgba(0, 0, 0, 0.517);
 }

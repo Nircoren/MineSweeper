@@ -10,50 +10,75 @@
 </head>
 
 <body onload="initGame()">
-    <div class="mainDiv" style="text-align:center">
-
-        <div class="upMenu">
-            <p>timer: <span class="time">0</span></p>
-            <div class="smileyDiv">
+    <div class="mainDiv">
+        <div class="aboveTableDiv">
+            <div class="upMenu">
+                <span class="time">000</span>
                 <p class="smiley" onclick="initGame()">(:</p>
+                <button class="undoBtn" onclick="onUndoClick()">undo</button>
             </div>
-            <div class="undoDiv">
-                <button class="undoBtn" onclick="undo()">undo</button>
+            <div class="levelDiv">
+                <button class="easy" onclick="setLevel(this)" data-level="1" data-size="4" data-mines="2"
+                    data-lives="1">easy</button>
+                <button class="medium" onclick="setLevel(this)" data-level="2" data-size="8" data-mines="14"
+                    data-lives="2">medium</button>
+                <button class="hard" onclick="setLevel(this)" data-level="3" data-size="12" data-mines="32"
+                    data-lives="3">hard</button>
             </div>
         </div>
 
-        <div class="levelDiv">
-            <button class="easy" onclick="setLevel(this)" data-level="1" data-size="4" data-mines="2"
-                data-lives="1">easy</button>
-            <button class="medium" onclick="setLevel(this)" data-level="2" data-size="8" data-mines="14"
-                data-lives="2">medium</button>
-            <button class="hard" onclick="setLevel(this)" data-level="3" data-size="12" data-mines="32"
-                data-lives="3">hard</button>
-        </div>
 
         <div class="tableMenusDiv">
             <div class="leftMenuDiv">
-                <p>lives: <span class="lives"></span></p>
-                <p>hints:
-                    <span onclick="onHintsClick(this)" class="hints" data-level='' data-hint-num="hint1">L</span>
-                    <span onclick="onHintsClick(this)" class="hints" data-hint-num="hint2">L</span>
-                    <span onclick="onHintsClick(this)" class="hints" data-hint-num="hint3">L</span>
-                </p>
+
+                <p class="livesP">Lives: <span class="lives"></span></p>
+                <p class="hintsP">Hints:</p>
+                <div class="bestScoreDiv">
+                    <p class="bestScoreTxt">Best Score: <p class="bestScores"></p></p>
+                </div>
+               
+
 
             </div>
             <table class="board">
             </table>
             <div class="rightMenuDiv">
-                <div>
-                    <button class="megaHint" onclick="megaHint()">Mega Hint</button>
+                <div class="topRightMenu">
+                    <div>
+                        <button class="megaHint" onclick="megaHint(this)">Mega Hint</button>
+                        <p>Mega Hint <span class="megaHitAval">available</span></p>
+                    </div>
+                    <div class="safeClickDiv">
+                        <button onclick="onSafeClick()">safe click</button>
+                        <p><span class="safeClicksLeft"></span> clicks available</p>
+                    </div>
                 </div>
-                <div class="safeClickDiv">
-                    <button onclick="onSafeClick()">safe click</button>
-                    <p><span class="safeClicksLeft"></span> clicks availible</p>
+
+                <div class="bottomRightMenu">
+                    <div class="darkAndManual">
+                        <div class="sevenBoomDiv">
+                            <button class="sevenBoom" onclick="sevenBoom()">7BOOM!</button>
+                        </div>
+                        <div class="darkModeBtnDiv">
+                            <button class="darkModeBtn" onclick="darkMode()">Dark Mode</button>
+                        </div>
+                    </div>
+
+                    <div class="darkAndManual">
+                        <div class="">
+                            <button class="manualMinesBtn" onclick="manualMines()">manual placement</button>
+                            <p class="manualMinesDescription"></p>
+                        </div>
+                        <div>
+                            <button class="" onclick="onExterminatorClick()">Exterminator!</button>
+                            <p><span class="exterP"></span></p>
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="sevenBoomDiv">
-                    <button class="sevenBoom" onclick="sevenBoom()">7BOOM!</button>
-                </div>
+
+
             </div>
         </div>
 
@@ -62,9 +87,6 @@
 
 
 
-        <div>
-            <button class="manualMinesBtn" onclick="manualMines()">manual placement</button>
-        </div>
 
 
 
